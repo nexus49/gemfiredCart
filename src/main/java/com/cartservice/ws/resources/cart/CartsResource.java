@@ -14,13 +14,13 @@ import java.util.List;
  * Date: 4/3/11
  * Time: 7:29
  */
-@Path("carts/")
+@Path("/carts")
 public class CartsResource {
 
     @GET
 	@Produces(
 	{ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-	public Response getAddresses(@QueryParam("offset") @DefaultValue("0") final int offset, @QueryParam("limit") @DefaultValue("10") final int limit)
+	public Response getCarts(@QueryParam("offset") @DefaultValue("0") final int offset, @QueryParam("limit") @DefaultValue("10") final int limit)
 	{
 		return Response.ok().entity(createDummyDTO()).build();
 	}

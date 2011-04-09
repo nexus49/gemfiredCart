@@ -12,9 +12,9 @@ import java.util.List;
 @XmlRootElement(name = "carts")
 public class CartsDTO {
 
+    public CartsDTO(){}
 
-    @XmlElement(name = "carts")
-	private List<CartDTO> carts;
+    private List<CartDTO> carts;
 
     public CartsDTO(final List<CartDTO> carts)
 	{
