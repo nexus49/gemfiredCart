@@ -1,5 +1,7 @@
 package com.cartservice.ws.dto;
 
+import com.cartservice.model.Cart;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -11,9 +13,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class CartDTO {
 
 
-   private String cartID;
+    private String cartID;
 
-   private String username;
+    private String username;
+
+    public CartDTO() {}
+
+    public CartDTO(Cart cart) {
+        this.username = cart.getUsername();
+        this.cartID = cart.getCartId();
+    }
 
     public String getCartID() {
         return cartID;
